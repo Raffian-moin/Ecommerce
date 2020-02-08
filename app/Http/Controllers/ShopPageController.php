@@ -20,7 +20,7 @@ class ShopPageController extends Controller
 
     public function show($slug){
         $product=product::where('slug',$slug)->firstOrFail();
-        $mightLikeAlso=product::where('slug','!=',$slug)->inRandomOrder()->take(4)->get();
+        $mightLikeAlso=product::where('slug','!=',$slug)->MightAlsoLike()->get();
         return view('partials.product',compact("product","mightLikeAlso"));
     }
 }
