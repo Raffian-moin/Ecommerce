@@ -28,6 +28,11 @@ Route::delete('/cart/{product}', 'CartPageController@destroy')->name('cart.delet
 Route::post('/cart/saveForLater/{product}', 'CartPageController@saveForLater')->name('cart.saveForLater');
 Route::delete('/saveForLater/{product}', 'saveForLaterPageController@destroy')->name('saveForLater.delete');
 Route::post('/saveForLater/switchToCart/{product}', 'saveForLaterPageController@switchToCart')->name('saveForLater.switchToCart');
+Route::get('/checkout', 'checkoutController@index')->name('checkout.index');
+Route::post('/checkout', 'checkoutController@store')->name('checkout.store');
+Route::get('/confrim', 'confirmController@index')->name('confirm.index');
+
+
 
 
 /*Route::view('/product', 'partials.product');

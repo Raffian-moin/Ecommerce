@@ -293,6 +293,11 @@ h2 {
   background: #35a48d;
 }
 
+.button-primary:disabled {
+  background: #63cdb7;
+  cursor: not-allowed;
+}
+
 .button-plain {
   border: 1px solid #212121 !important;
   background: transparent;
@@ -839,6 +844,25 @@ h1.checkout-heading {
   font-weight: bold;
   font-size: 22px;
   line-height: 2.2;
+}
+
+.checkout-section .StripeElement {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 16px 16px;
+  border: 1px solid #ccc;
+}
+
+.checkout-section .StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.checkout-section .StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.checkout-section #card-errors {
+  color: red;
 }
 
 .thank-you-section {
